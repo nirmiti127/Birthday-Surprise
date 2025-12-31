@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Birthday Surprise </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 1) PASSWORD GATE -->
+  <main id="loginScreen" class="screen">
+    <h1> A little Surpise for you </h1>
+    <p>Enter the password to continue</p>
+
+    <input id="passwordInput" type="password" placeholder="Password" />
+    <button id="loginBtn">Enter</button>
+    <p id="loginMsg" class="msg"></p>
+  </main>
+
+  <!-- 2) CAKE + CANDLES -->
+  <main id="cakeScreen" class="screen hidden">
+    <h1>Make a wish… </h1>
+    <p class="small">Click “Enable Mic” and blow towards your laptop mic 🎙️</p>
+
+    <div class="cakeArea">
+      <div class="cake">
+        <div id="candles" class="candles"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <button id="micBtn">🎙️ Enable Mic</button>
+      <button id="tapBlowBtn" class="secondary">No mic? Tap to blow</button>
+    </div>
+
+    <p id="statusMsg" class="msg"></p>
+
+    <button id="birthdayBtn" class="hidden big">hehe, click karo !</button>
+  </main>
+
+  <!-- 3) MEMORY SCREEN (2 photos + 1 text + gift button) -->
+  <main id="memoryScreen" class="screen hidden">
+    <h1>Happy Birthday Ritwik </h1>
+    <p class="small">May this year brings you peace and good health </p>
+
+    <section class="memory">
+      <div class="card">
+        <img src="pic1.jpg" alt="Memory 1" />
+      </div>
+
+      <div class="card">
+        <img src="pic2.jpg" alt="Memory 2" />
+      </div>
+    </section>
+
+    <p class="finalText" id="finalText">
+      If someone had told this version of Nirmiti that she would be the happiest this year, she wouldn’t have believed it. Apart from all the feelings I have for you, you are one of the kindest and most practical humans I have ever known. You bring out the best in everyone around you.
+
+You don’t care much about the world, but you care deeply about keeping your loved ones close, happy, and protected. You love them wholeheartedly, and it shows.
+
+My stars must have been in the perfect place when God wrote our timelines and chose for us to meet. Thanks to UBS and MoveInSync, I found you.
+
+I hope I can keep you happy and care for you the same way you care for your loved ones. I know you are going to achieve incredible things ahead, and I can’t wait to witness it all — standing beside you as you do.
+
+I can’t wait to see the world with you. 
+    </p>
+
+    <button id="openGiftBtn" class="big">Birthday Game ! HAHAHAHAHAH </button>
+  </main>
+
+  <!-- 4) GAME OVERLAY -->
+  <section id="gameOverlay" class="gameOverlay hidden">
+    <div class="hud">
+      <div>Score: <span id="score">0</span> / 10</div>
+      <div>Time: <span id="time">30</span>s</div>
+    </div>
+
+    <div id="game" class="game">
+      <div id="basket" class="basket" aria-label="basket"></div>
+
+      <!-- WIN PANEL -->
+      <div id="winPanel" class="message hidden">
+        <h1>WIN WIN !! Time for your Birthday Present!</h1>
+        <p><b>Clue:</b> This is not your favourite brand & </p>
+        <p class="small">Ends with my name's first two letters </p>
+        <button id="closeGameBtn">Close</button>
+      </div>
+
+      <!-- GAME OVER PANEL -->
+      <div id="gameOverPanel" class="message hidden">
+        <h1>Time khatam</h1>
+        <p>Wapas try kar</p>
+        <button id="retryBtn">Restart</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
